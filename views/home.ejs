@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="./icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <title>DevNX Studio</title>
+</head>
+<body>
+    
+    <div id="navbar">
+        <i id="menu" class="fa-solid fa-bars"></i>
+        <a id="logoclikc" href="http://localhost:5000">
+            <img src="./logo.png" alt="Try again to get the image problem due to internet traffic" id="logo1">
+        </a>
+        <div id="list">
+            <a id="lis" href="/"><li>Home</li></a>
+            <a id="lis"  href="/"><li>Services</li></a>
+            <a id="lis"  href="/contact-us"><li>Let's Work</li></a>
+            <a id="lis"  href="/about-us"><li>About Us</li></a>
+        </div>
+    </div>
+    <div id="schritt1">
+        <div id="div2">
+            <div id="cont">
+                <h3 id="w">Web</h3>
+                <h3 id="dev">Development</h3>
+            </div>
+            <br><br><br>
+            <h1>What Are You Waiting!!</h1>
+            <h2>Get Your Business A Digital Presence</h2>
+            <p>We live in a computerised world, Having an online presence is like water in a desert, it allows your businesses to reach a wider audience and build a stronger brand awareness locally and internationally.</p>   
+            <a href="http://localhost:5000/contact-us"> 
+                <button>Get In Touch Now</button>
+            </a>
+        </div>
+    </div>
+    
+    <div id="services">
+        <h1>SERVICES</h1><br><br><br>
+        <div id="sd1">
+            <div>
+                <h1>Best Approach</h1>
+                <p>Turn your idea into existence with us, we build all kind of web technologies single page applications, server-side rendered apps, real-time apps and presentation websites etc. What you look for is our purpose, We offer websites developed and designed using the latest technologies and tools for optimum performance for your need.</p>
+            </div>
+            <img src="./3252595.jpg" alt="Try again to get the image problem due to internet traffic">
+        </div>
+        <div id="sd2">
+            <div id="igs">
+                <img src="./2716006.jpg" alt="Try again to get the image problem due to internet traffic">
+                <img src="./4021509.jpg" id="com" alt="Try again to get the image problem due to internet traffic">
+            </div>
+            <div id="ser">
+                <h2>Website development</h2>
+                <h2>Corporate website</h2>
+                <h2>Startup websites</h2>
+                <h2>Landings and promo sites</h2>
+                <h2>E-commerce</h2>
+                <h2>Web applications development</h2>
+                <h2>Web design</h2>
+            </div>
+        </div>
+
+        <div id="sd3">
+            <div id="title">
+                <h3>Web development solutions designed to understand your users, give wider accessibility and scale your business faster.</h3>
+            </div>
+            <div id="cont3">
+                <div id="ds1">
+                    <h1>Interactive Design</h1>
+                    <p>We keep your users in mind at every stage of your web app development – from brainstorming to design. The result? You will get a highly interactive web app and unique user experience.</p>
+                </div>
+                <div>
+                    <h1>Latest Technology</h1>
+                    <p>We perform the best to empower your web app with the right and latest technology that helps you stand the test of time in every aspect.</p>
+                </div>
+                <div id="ds3">
+                    <h1>Compatible with all devices</h1>
+                    <p>The web apps we create are all-device compatible. You can access them from your smartphone, computer or tablet and other portable devices seamlessly and experience superlative performance. This means your website looks good on every screen!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="about">
+        <h1>About Us</h1>
+        <div>
+            <p>This is DevNX Studio's design and web development. We see the essence and find bright solutions for each project. And provide the expertise needed to launch, grow, and transform businesses of all shapes.</p>            
+        </div>
+        <h1>We Solve Your Problems And Help You Prosper Your Business</h1>
+        <div>
+            <p> We are as enthusiastic as you to create tech-enabled solutions that could not only grow your business but change the entire perspective.</p>
+        </div>
+        <a href="http://localhost:5000/about-us"><button>read more</button></a>
+        
+    </div>
+    
+    <div id="form">
+        <br><br>
+        <div id="tit">
+            <h1 id="t1">Want To Work With Us</h1><h1 id="t2">?</h1>
+        </div>
+        <br><br><br>
+        <% if(success == true){ %>
+            <p style="margin-bottom: 10px; color: #00aeff; font-weight: bold;">Message is sent successfully</p>
+        <% } %>
+        <form id="inputs" method="POST" action="/send-message">
+            <div>
+                <div><input type="text" required placeholder="Name*" name="name"></div>
+                <div><input type="email" required placeholder="Email*" name="email"></div>
+            </div>
+            <br>
+            <div>
+                <div><input type="text" placeholder="Subject" name="subject"></div>
+                <div><input type="text" placeholder="Phone" name="phone"></div>
+            </div>
+            <br>
+            <div><textarea id="tarea" required placeholder="Message" name="message"></textarea></div>
+            <br><br><br><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div id="footer">
+        <div id="ft1">
+            <img src="./logo.png" alt="Try again to get the image problem due to internet traffic" id="logo">
+            <h1>Your Trusted</h1>
+            <h1>Web Dev Partner</h1>
+        </div>
+        <div id="ft2">
+            <img src="./footer.png" alt="Try again to get the image problem due to internet traffic" >
+        </div>
+        <div id="ft3">
+            <div id="ls">
+                <a href="/"><li>Home</li></a>
+                <a href="/"><li>Services</li></a>
+                <a href="/about-us"><li>About Us</li></a>
+                <a href="/contact-us"><li>Contact Us</li></a>
+            </div>
+            <br>
+            <p>Follow Us On</p>
+            <div>
+                <a target="_blank" href="https://www.facebook.com/people/Devnx-Studio/61553205504444/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a target="_blank" href="https://www.instagram.com/devnxstudio/?igshid=OGQ5ZDc2ODk2ZA%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://twitter.com/devnxstudio"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <br>
+            <div id="email">
+                <i class="fa-regular fa-envelope"></i>
+                <p>studiodevnx@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <p id="copyright">Copyright &copy 2023 DevNX Studio. All rights reserved</p>
+
+
+<script>
+    const nav = document.querySelector('#navbar')
+    const list = document.querySelectorAll('#lis')
+    const menu = document.querySelector('#menu')
+    const menuList = document.querySelector('#list')
+
+    menu.addEventListener('click', () => {
+        menuList.classList.toggle('active')
+        if(menuList.classList == 'active' && window.scrollY == 0){
+            console.log('working')
+            nav.style.backgroundColor = '#00aeff'
+        } 
+        else if(menuList.classList !== 'active' && window.scrollY == 0) {
+            nav.style.background = 'none'
+        }
+    })
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY == 0){
+            if(menuList.classList == 'active'){
+                nav.style.backgroundColor = '#00aeff'
+            }else{
+            nav.style.background = 'none'
+            list.forEach(l => {
+                l.addEventListener('mouseover', () => {
+                    l.style.color = '#00aeff'
+                    // l.style.transitionDuration = '.4s'
+                })
+                l.addEventListener('mouseout', () => {
+                    l.style.color = '#fff'
+                    // l.style.transitionDuration = '.4s'
+                })
+            })
+        }
+        } else {
+            nav.style.backgroundColor = '#00aeff'
+            list.forEach(l => {
+                l.addEventListener('mouseover', () => {
+                    l.style.color = '#000'
+                    // l.style.transitionDuration = '.4s'
+                })
+                l.addEventListener('mouseout', () => {
+                    l.style.color = '#fff'
+                    // l.style.transitionDuration = '.4s'
+                })
+            })
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,878 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+/* background-color: #00084d; */
+::selection{
+    color: white;
+    background: rgb(113, 0, 219);
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 4rem;
+}
+#navbar{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    height: 75px;
+}
+#logo1{
+    width: 200px;
+    border-radius: 7px;
+}
+#logoclikc{
+    position: absolute;
+    left: 5%;
+    width: 200px;
+    border-radius: 7px;
+}
+#menu{
+    position: absolute;
+    right: 20px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+#list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+#list li{
+    list-style-type: none;
+    margin: 0 50px 0 0;
+    font-size: 17px;
+    cursor: pointer;
+}
+#lis:hover{
+    color: #00aeff;
+}
+#lis{
+    text-decoration: none;
+    color: white;
+}
+
+#schritt1{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-image: url("./home4.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+}
+#div2{
+    padding-top: 100px;
+    margin: 70px;
+    width: 80%;
+    margin-left: 30%;
+    margin-right: auto;
+}
+#cont{
+    height: 150px;
+    margin-left: 200px;
+}
+#w{
+    margin-left: 130px;
+    font-size: 90px;
+    font-weight: bold;
+    color: #ffffff;
+}
+#dev{
+    color: #00aeff;
+    font-size: 50px;
+    font-weight: bold;
+}
+#div2 h1{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+#div2 h2{
+    color: rgb(255, 255, 255);
+    margin: 10px 0 5px 0;
+    font-size: 40px;
+}
+#div2 p{
+    width: 700px;
+    font-size: 20px;
+    color: rgb(246, 246, 246);
+}
+#div2 button{
+    background-color: #00aeff;
+    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    margin-top: 80px; 
+}
+#div2 button:hover{
+    background-color: white;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+#services {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sd1{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+#sd1 img{
+    width: 500px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+#sd1 p{
+    font-size: 23px;
+    color: #7c7c7c;
+}
+#sd1 div {
+    width: 600px;
+}
+#sd1 div h1{
+    color: #00aeff;
+}
+#sd2{
+    margin-top: 10px;
+    display: flex;
+}
+#igs{
+    display: flex;
+    flex-direction: column;
+}
+#igs img{
+    width: 400px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#com{
+    margin-left: 200px;
+}
+#ser{
+    width: 400px;
+    margin-left: 40px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+#ser h2{
+    padding: 15px 10px 15px 10px;
+    background-color: #00aeff;
+    margin: 5px;
+    border-radius: 3px;
+    color: white;
+    transition-duration: .3s;
+    box-shadow: 5px 5px #cacaca;
+}
+#ser h2:hover{
+    background-color: rgb(255, 255, 255);
+    margin-left: 20px;
+    color: #00aeff;
+    transition-duration: .3s;
+}
+
+#about{
+    margin-top: 50px;
+    background-image: url("./pic4.jpeg");
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 400px;
+}
+#about h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#about div{
+    width: 600px;
+}
+#about button{
+    margin-top: 15px;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #00aeff;
+    color: white;
+    border: none;
+    transition-duration: 0.1s;
+    border-radius: 3px;
+}
+#about button:hover{
+    border: 1px solid #000000;
+    background-color: white;
+    color: black;
+    transition-duration: 0.1s;
+}
+#sd3{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sd3 h3{
+    font-size: 25px;
+    color: #9c9c9c;
+}
+#title{
+    width: 400px;
+    text-align: center;
+}
+#cont3{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 5fr);
+}
+#cont3 div{
+    width: 250px;
+    background-color: #00aeff;
+    padding: 40px;
+    margin: 10px;
+    color: white;
+    transition-duration: .3s;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 10px #b8b8b8;
+    border: 2px solid #00aeff;
+}
+#cont3 div:hover{
+    background-color: #ffffff;
+    color: #00aeff;
+    transition-duration: .3s;
+}
+#cont3 div h1{
+    margin-bottom: 10px;
+}
+#cont3 div p{
+    font-size: 20px;
+}
+#ds1{
+    border-radius: 100px 0 0 0;
+}
+#ds3{
+    border-radius: 00px 0 100px 0;
+}
+
+#form{
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#tit{
+    display: flex;
+}
+#t1{
+    color: #000000;
+}
+#t2{
+    color: #00aeff;
+}
+#inputs input{
+    width: 400px;
+    height: 40px;
+    margin: 0px 10px 30px 10px;
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #00aeff;
+    outline: none;
+    transition-duration: 0.5s;
+}
+#inputs div{
+    display: flex;
+}
+#inputs input:focus{
+    border-bottom: 2px solid #5d5d5d;
+    transition-duration: 0.5s;
+}
+#tarea{
+    border: none;
+    width: 835px;
+    height: 150px;
+    font-size: 16px;
+    padding: 5px;
+    border-bottom: 2px solid #00aeff;
+    outline: none;
+    transition-duration: 0.5s;
+}
+#tarea:focus{
+    border-bottom: 2px solid #5d5d5d;
+    transition-duration: 0.5s;
+}
+#inputs button{
+    background-color: #00aeff;
+    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    transition-duration: 0.3s;
+}
+#inputs button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid #000000;
+    transition-duration: 0.3s;
+}
+
+#footer{
+    display: flex;
+    background-color: #00aeff;    
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+#footer div{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#ft1 h1{
+   font-size: 30px;
+   margin-top: 10px;
+}
+#logo{
+    width: 150px;
+    border-radius: 7px;
+}
+#ft2{
+    margin-top: 20px;
+}
+#ft2 img{
+    width: 190px;
+}
+#ft2 p{
+    margin-top: 10px;
+    font-size: 16px;
+}
+#ft3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#ft3 a{
+    text-decoration: none;
+    color: white;
+}
+#ft3 i{
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+    transition-duration: .4s;
+}
+#ft3 i:hover{
+    color: #000000;
+    transition-duration: .4s;
+}
+#ft3 p{
+    font-weight: bold;
+}
+#ls{
+    display: flex;
+    margin-bottom: 20px;
+}
+#ls li{
+    list-style-type: none;
+    margin: 0 10px 0 0;
+    font-size: 17px;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+#ls li:hover{
+    color: #000000;
+    transition-duration: .4s;
+}
+#email{
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+#email p:hover{
+    color: black;
+}
+#email i{
+    font-size: 17px;
+    margin: 5px;
+}
+#copyright{
+    text-align: center;
+    background-color: #00aeff;
+    padding: 8px;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (max-width: 1200px) {
+    #list{
+        margin-left: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+    @media (max-width: 1100px) {
+        #navbar{
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            height: 75px;
+        }
+        #logo1{
+            width: 200px;
+            border-radius: 7px;
+        }
+        #logoclikc{
+            position: absolute;
+            left: 5%;
+            width: 200px;
+            border-radius: 7px;
+        }
+        #list{
+            margin-left: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        #list li{
+            list-style-type: none;
+            margin: 0 15px 0 0;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        #div2{
+            padding-top: 100px;
+            margin: 70px;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: auto;
+        }
+        #div2 p{
+            width: 550px;
+            font-size: 20px;
+            color: rgb(246, 246, 246);
+        }
+        
+        #services {
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #sd1{
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: 10px;
+            align-items: center;
+        }
+        #sd1 img{
+            margin-bottom: 20px;
+        }
+        #sd2{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        #cont3{
+            padding-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 5fr);
+        }
+        
+        #form{
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        #tit{
+            display: flex;
+        }
+        #t1{
+            color: #000000;
+        }
+        #t2{
+            color: #00aeff;
+        }
+        #inputs input{
+            width: 300px;
+        }
+        #tarea{
+            width: 630px;
+        }
+
+        #footer{
+            display: flex;
+            background-color: #00aeff;
+            color: white;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        #footer div{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #ft1 h1{
+            font-size: 25px;
+            margin-top: 10px;
+        }
+        #logo{
+            margin-top: 10px;
+            width: 150px;
+            border-radius: 7px;
+        }
+        #ft2{
+            margin-top: 20px;
+        }
+        #ft2 img{
+            width: 130px;
+        }
+        #ft3 i{
+            font-size: 25px;
+            margin-left: 0px;
+            margin-top: 10px;
+            transition-duration: .4s;
+        }
+        #ft3 p{
+            font-weight: bold;
+        }
+        #ls{
+            display: flex;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        #ls li{
+            list-style-type: none;
+            margin: 0 10px 0 0;
+            font-size: 15px;
+            cursor: pointer;
+            transition-duration: .4s;
+        }
+        #email{
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            padding-left: 0;
+        }
+        #email i{
+            font-size: 17px;
+            margin: 5px;
+        }
+
+        @media (max-width: 700px) {
+            #navbar{
+                height: 60px;
+            }
+            #logo1{
+                width: 150px;
+                border-radius: 7px;
+            }
+            #logoclikc{
+                position: absolute;
+                left: 5%;
+                width: 120px;
+                border-radius: 7px;
+            }
+            #menu{
+                right: 20px;
+                display: block;
+                cursor: pointer;
+                font-size: 20px;
+            }
+            #list{
+                position: absolute;
+                right: 0px;
+                top: 20px;
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                background-color: #00aeff;
+                width: 100%;
+                visibility: hidden;
+            }
+            #list.active{
+                visibility: visible;
+            }
+            #list li{
+                margin:  10px;
+            }
+            #list a{
+                width: 100%;
+            }
+            #list a:hover{
+                background-color: white;
+                width: 100%;
+            }
+
+            #div2{
+                padding-top: 100px;
+                margin: 70px;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: auto;
+            }
+            #cont{
+                height: 150px;
+                margin-left: 100px;
+            }
+            #w{
+                margin-left: 65px;
+                font-size: 60px;
+                font-weight: bold;
+                color: #ffffff;
+            }
+            #dev{
+                color: #00aeff;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            #div2 h1{
+                color: rgb(255, 255, 255);
+                font-size: 25px;
+            }
+            #div2 h2{
+                color: rgb(255, 255, 255);
+                margin: 10px 0 5px 0;
+                font-size: 30px;
+            }
+            #div2 p{
+                width: 300px;
+                font-size: 16px;
+                color: rgb(246, 246, 246);
+            }
+            #div2 button{
+                background-color: #00aeff;
+                color: white;
+                width: 150px;
+                height: 40px;
+                font-size: 14px;
+            }
+
+            #services {
+                padding-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #sd1{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            #sd1 img{
+                width: 350px;
+                border-radius: 5px;
+            }
+            #sd1 p{
+                font-size: 16px;
+                color: #7c7c7c;
+            }
+            #sd1 div {
+                width: 300px;
+            }
+            #sd1 div h1{
+                margin-top: 10px;
+                font-size: 25px;
+                color: #00aeff;
+            }
+            #sd2{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+            #igs{
+                display: flex;
+                flex-direction: column;
+            }
+            #igs img{
+                width: 300px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+            }
+            #com{
+                margin-left: 110px;
+            }
+            #ser{
+                width: 350px;
+                margin-left: 40px;
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+            #ser h2{
+                font-size: 18px;
+                padding: 15px 10px 15px 10px;
+                background-color: #00aeff;
+                margin: 5px;
+                border-radius: 3px;
+                cursor: pointer;
+                color: white;
+                transition-duration: .3s;
+                box-shadow: 5px 5px #cacaca;
+            }
+            #sd3{
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #sd3 h3{
+                font-size: 22px;
+                color: #9c9c9c;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            #title{
+                width: 400px;
+                text-align: center;
+            }
+            #cont3{
+                padding-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+            #cont3 div{
+                width: 220px;
+                height: 300px;
+            }
+            #cont3 div h1{
+                margin-bottom: 10px;
+		        font-size: 25px;
+            }
+            #cont3 div p{
+                font-size: 17px;
+            }
+            #ds1{
+                border-radius: 100px 0 0 0;
+            }
+            #ds3{
+                border-radius: 00px 0 100px 0;
+            }
+
+            #about{
+                height: 500px;
+            }
+            #about h1{
+                padding-top: 20px;
+                padding-bottom: 18px;
+                font-size: 22px;
+            }
+            #about p{
+                font-size: 18px;
+            }
+            #about div{
+                width: 300px;
+            }
+            #about button{
+                margin-top: 15px;
+                width: 150px;
+                height: 40px;
+                font-size: 14px;
+                font-weight: bold;
+                cursor: pointer;
+                background-color: #00aeff;
+                color: white;
+                border: none;
+                transition-duration: 0.1s;
+                border-radius: 3px;
+            }            
+            #inputs button{
+                background-color: #00aeff;
+                color: white;
+                width: 150px;
+                height: 40px;
+                font-size: 14px;
+                font-weight: bold;
+                cursor: pointer;
+                border: none;
+                border-radius: 3px;
+                transition-duration: 0.3s;
+            }
+
+            #form{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            #tit{
+                display: flex;
+            }
+            #t1{
+                color: #000000;
+            }
+            #t2{
+                color: #00aeff;
+            }
+            #inputs {
+                text-align: center;
+            }
+            #inputs input{
+                width: 250px;
+            }
+            #inputs div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #tarea{
+                width: 250px;
+            }
+
+            #footer{
+                display: flex;
+                flex-direction: column;
+            }
+            #logo{
+                margin-top: 10px;
+                width: 150px;
+                border-radius: 7px;
+            }
+            #ft2{
+                margin-top: 20px;
+            }
+            #ft2 img{
+                width: 140px;
+            }
+        }
+    }
+}

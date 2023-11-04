@@ -1,0 +1,526 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+::selection{
+    color: white;
+    background: rgb(113, 0, 219);
+}
+
+#navbar{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    height: 75px;
+}
+#logo1{
+    width: 200px;
+    border-radius: 7px;
+}
+#logoclikc{
+    position: absolute;
+    left: 5%;
+    width: 200px;
+    border-radius: 7px;
+}
+#menu{
+    position: absolute;
+    right: 20px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+#list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    visibility: visible;
+}
+#list li{
+    list-style-type: none;
+    margin: 0 50px 0 0;
+    font-size: 17px;
+    cursor: pointer;
+}
+#lis:hover{
+    color: #00aeff;
+}
+#lis{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#about {
+    width: 100%;
+    color: #ffffff;
+    height: 100vh;
+    background-image: url("./contact4.jpg");
+    background-size: cover;
+}
+#text{
+    padding-top: 200px;
+    width: 650px;
+    margin-left: 30%;
+    font-size: 20px;
+}
+#tlus{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+#abus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#grid div{
+    background-color: #00aeff;
+    width: 300px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 10px #b8b8b8;
+    transition-duration: 0.3s;
+    border: 2px solid #00aeff;
+}
+#grid div:hover{
+    background-color: #ffffff;
+    color: #00aeff;
+    transition-duration: 0.3s;
+}
+#grid h2{
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+#grid p{
+   font-size: 17px;
+   margin-bottom: 80px;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#tit{
+    display: flex;
+}
+#t1{
+    color: #000000;
+}
+#t2{
+    color: #00aeff;
+}
+#inputs input{
+    width: 400px;
+    height: 40px;
+    margin: 0px 10px 30px 10px;
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #00aeff;
+    outline: none;
+    transition-duration: 0.5s;
+}
+#inputs div{
+    display: flex;
+}
+#inputs input:focus{
+    border-bottom: 2px solid #6d6d6d;
+    transition-duration: 0.5s;
+}
+#tarea{
+    border: none;
+    width: 835px;
+    height: 150px;
+    font-size: 16px;
+    padding: 5px;
+    border-bottom: 2px solid #00aeff;
+    outline: none;
+    transition-duration: 0.5s;
+}
+#tarea:focus{
+    border-bottom: 2px solid #6d6d6d;
+    transition-duration: 0.5s;
+}
+#inputs button{
+    background-color: #00aeff;
+    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    transition-duration: 0.3s;
+}
+#inputs button:hover{
+    background-color: white;
+    color: #000;
+    border: 1px solid #000;
+    transition-duration: 0.3s;
+}
+
+#footer{
+    display: flex;
+    background-color: #00aeff;
+    margin-top: 50px;
+    color: white;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+}
+#footer div{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#ft1 h1{
+    font-size: 30px;
+    margin-top: 10px;
+}
+#logo{
+    width: 150px;
+    border-radius: 7px;
+}
+#ft2{
+    margin-top: 20px;
+}
+#ft2 img{
+    width: 190px;
+}
+#ft2 p{
+    margin-top: 10px;
+    font-size: 16px;
+}
+#ft3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#ft3 a{
+    text-decoration: none;
+    color: white;
+}
+#ft3 i{
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+    transition-duration: .4s;
+}
+#ft3 i:hover{
+    color: #000000;
+    transition-duration: .4s;
+}
+#ft3 p{
+    font-weight: bold;
+}
+#ls{
+    display: flex;
+    margin-bottom: 20px;
+}
+#ls li{
+    list-style-type: none;
+    margin: 0 10px 0 0;
+    font-size: 17px;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+#ls li:hover{
+    color: #000000;
+    transition-duration: .4s;
+}
+#email{
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+#email p:hover{
+    color: black;
+}
+#email i{
+    font-size: 17px;
+    margin: 5px;
+}
+#copyright{
+    text-align: center;
+    background-color: #00aeff;
+    padding: 8px;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////// ///////////////////////////// */
+@media (max-width: 1200px) {
+    #list{
+        margin-left: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+    @media (max-width: 1100px) {
+        #navbar{
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            height: 75px;
+        }
+        #logo1{
+            width: 200px;
+            border-radius: 7px;
+        }
+        #logoclikc{
+            position: absolute;
+            left: 5%;
+            width: 200px;
+            border-radius: 7px;
+        }
+        #list{
+            margin-left: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        #list li{
+            list-style-type: none;
+            margin: 0 15px 0 0;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        #lis{
+            text-decoration: none;
+            color: white;
+        }
+        #text{
+            padding-top: 200px;
+            width: 500px;
+            margin-left: 20%;
+        }
+        #grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        #form{
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        #inputs input{
+            width: 300px;
+        }
+        #tarea{
+            width: 630px;
+        }
+
+        #footer{
+            display: flex;
+            background-color: #00aeff;            
+            color: white;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        #footer div{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #ft1 h1{
+            font-size: 25px;
+            margin-top: 10px;
+        }
+        #logo{
+            margin-top: 10px;
+            width: 150px;
+            border-radius: 7px;
+        }
+        #ft2{
+            margin-top: 20px;
+        }
+        #ft2 img{
+            width: 130px;
+        }
+        #ft3 i{
+            font-size: 25px;
+            margin-left: 0px;
+            margin-top: 10px;
+            transition-duration: .4s;
+        }
+        #ft3 p{
+            font-weight: bold;
+        }
+        #ls{
+            display: flex;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        #ls li{
+            list-style-type: none;
+            margin: 0 10px 0 0;
+            font-size: 15px;
+            cursor: pointer;
+            transition-duration: .4s;
+        }
+        #email{
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            padding-left: 0;
+        }
+        #email i{
+            font-size: 17px;
+            margin: 5px;
+        }
+
+        @media (max-width: 700px) {
+            #navbar{
+                height: 60px;
+            }
+            #logo1{
+                width: 150px;
+                border-radius: 7px;
+            }
+            #logoclikc{
+                position: absolute;
+                left: 5%;
+                width: 120px;
+                border-radius: 7px;
+            }
+            #menu{
+                right: 20px;
+                display: block;
+                cursor: pointer;
+                font-size: 20px;
+            }
+            #list{
+                position: absolute;
+                right: 0px;
+                top: 20px;
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                background-color: #00aeff;
+                width: 100%;
+                visibility: hidden;
+            }
+            #list.active{
+                visibility: visible;
+            }
+            #list li{
+                margin:  10px;
+            }
+            #list a{
+                width: 100%;
+            }
+            #list a:hover{
+                background-color: white;
+                width: 100%;
+            }
+            #text{
+                padding-top: 200px;
+                width: 300px;
+                margin-left: 15%;
+            }
+            #text p{
+                font-size: 15px;
+            }
+            #tlus{
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+            #grid{
+                grid-template-columns: repeat(1, 1fr);
+            }
+            #grid div{
+                width: 240px;
+            }
+
+            #form{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            #tit{
+                display: flex;
+            }
+            #t1{
+                color: #000000;
+            }
+            #t2{
+                color: #00aeff;
+            }
+            #inputs {
+                text-align: center;
+            }
+            #inputs input{
+                width: 250px;
+            }
+            #inputs div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #tarea{
+                width: 250px;
+            }
+            #inputs button{
+                background-color: #00aeff;
+                color: white;
+                width: 150px;
+                height: 40px;
+                font-size: 14px;
+                font-weight: bold;
+                cursor: pointer;
+                border: none;
+                border-radius: 3px;
+                transition-duration: 0.3s;
+            }
+
+            #footer{
+                display: flex;
+                flex-direction: column;
+            }
+            #logo{
+                margin-top: 10px;
+                width: 150px;
+                border-radius: 7px;
+            }
+            #ft2{
+                margin-top: 20px;
+            }
+            #ft2 img{
+                width: 140px;
+            }
+        }
+    }
+}

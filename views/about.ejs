@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="./icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <title>About Us</title>
+</head>
+<body>
+    <div id="navbar">
+        <i id="menu" class="fa-solid fa-bars"></i>
+        <a id="logoclikc" href="http://localhost:5000">
+            <img src="./logo.png" alt="Try again to get the image problem due to internet traffic" id="logo1">
+        </a>
+        <div id="list">
+            <a id="lis" href="/"><li>Home</li></a>
+            <a id="lis"  href="/"><li>Services</li></a>
+            <a id="lis"  href="/contact-us"><li>Let's Work</li></a>
+            <a id="lis"  href="/about-us"><li>About Us</li></a>
+        </div>
+    </div>
+    <div id="about">
+        <div id="text">
+            <div>
+                <h1 id="tlus">We Solve Your Challenges</h1>
+                <p>DevNX studio is dedicated to add brightness to your business through technology based solution, our experienced team works efficiently to provide you exactly what you look for in terms of web development and web design.</p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div id="abus">
+            <h1>About Us?</h1>
+            <br><br>
+            <div id="grid">
+                <div>
+                    <h2>Our Creativity</h2>
+                    <p>We are creative, Our job is about crafting user experiences turning lines of text into interactive art. We embrace creativity and use it to make work that stands out. Our unique touch is what sets us apart.</p>
+                </div>
+                <div>
+                    <h2>Clients experience</h2>
+                    <p>Our clients get the best experience, by respecting client's time, we educate our clients, involve them in the process and understanding their needs</p>
+                </div>
+                <div>
+                    <h2>We use the latest technologies</h2>
+                    <p>We use modern technology in order to boost productivity as well as the efficiency of our websites, as it allows our applications to perform tasks in less time.</p>
+                </div>
+            </div>
+    </div><br><br>
+
+    <div id="form">
+        <br><br>
+        <div id="tit">
+            <h1 id="t1">Want To Work With Us</h1><h1 id="t2">?</h1>
+        </div>
+        <br><br><br>
+        <% if(success == true){ %>
+            <p style="margin-bottom: 10px; color: #00aeff; font-weight: bold;">Message is sent successfully</p>
+        <% } %>
+        <form id="inputs" method="POST" action="/send-message">
+            <div>
+                <div><input type="text" required placeholder="Name*" name="name"></div>
+                <div><input type="email" required placeholder="Email*" name="email"></div>
+            </div>
+            <br>
+            <div>
+                <div><input type="text" placeholder="Subject" name="subject"></div>
+                <div><input type="text" placeholder="Phone" name="phone"></div>
+            </div>
+            <br>
+            <div><textarea id="tarea" required placeholder="Message" name="message"></textarea></div>
+            <br><br><br><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div id="footer">
+        <div id="ft1">
+            <img src="./logo.png" alt="Try again to get the image problem due to internet traffic" id="logo">
+            <h1>Your Trusted</h1>
+            <h1>Web Dev Partner</h1>
+        </div>
+        <div id="ft2">
+            <img src="./footer.png" alt="Try again to get the image problem due to internet traffic">
+        </div>
+        <div id="ft3">
+            <div id="ls">
+                <a href="/"><li>Home</li></a>
+                <a href="/"><li>Services</li></a>
+                <a href="/about-us"><li>About Us</li></a>
+                <a href="/contact-us"><li>Contact Us</li></a>
+            </div>
+            <br>
+            <p>Follow Us On</p>
+            <div>
+                <a target="_blank" href="https://www.facebook.com/people/Devnx-Studio/61553205504444/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a target="_blank" href="https://www.instagram.com/devnxstudio/?igshid=OGQ5ZDc2ODk2ZA%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://twitter.com/devnxstudio"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <br>
+            <div id="email">
+                <i class="fa-regular fa-envelope"></i>
+                <p>studiodevnx@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <p id="copyright">Copyright &copy 2023 DevNX Studio. All rights reserved</p>
+
+
+    <script>
+    const nav = document.querySelector('#navbar')
+    const list = document.querySelectorAll('#lis')
+    const menu = document.querySelector('#menu')
+    const menuList = document.querySelector('#list')
+
+    menu.addEventListener('click', () => {
+        menuList.classList.toggle('active')
+        if(menuList.classList == 'active' && window.scrollY == 0){
+            console.log('working')
+            nav.style.backgroundColor = '#00aeff'
+        } 
+        else if(menuList.classList !== 'active' && window.scrollY == 0) {
+            nav.style.background = 'none'
+        }
+    })
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY == 0){
+            if(menuList.classList == 'active'){
+                nav.style.backgroundColor = '#00aeff'
+            }else{
+            nav.style.background = 'none'
+            list.forEach(l => {
+                l.addEventListener('mouseover', () => {
+                    l.style.color = '#00aeff'
+                    // l.style.transitionDuration = '.4s'
+                })
+                l.addEventListener('mouseout', () => {
+                    l.style.color = '#fff'
+                    // l.style.transitionDuration = '.4s'
+                })
+            })
+        }
+        } else {
+            nav.style.backgroundColor = '#00aeff'
+            list.forEach(l => {
+                l.addEventListener('mouseover', () => {
+                    l.style.color = '#000'
+                    // l.style.transitionDuration = '.4s'
+                })
+                l.addEventListener('mouseout', () => {
+                    l.style.color = '#fff'
+                    // l.style.transitionDuration = '.4s'
+                })
+            })
+        }
+    })
+    </script>
+</body>
+</html>
