@@ -642,6 +642,14 @@ html{
                 background-color: white;
                 width: 100%;
             }
+            #schritt1{
+                width: 100%;
+                height: 100vh;
+                color: white;
+                background-image: url("./home4.jpg");
+                background-position: center;
+                overflow-x: hidden;
+            }
 
             #div2{
                 padding-top: 100px;
@@ -729,7 +737,7 @@ html{
                 border-radius: 5px;
             }
             #com{
-                margin-left: 110px;
+                margin-left: 70px;
             }
             #ser{
                 width: 350px;
@@ -744,7 +752,6 @@ html{
                 background-color: #00aeff;
                 margin: 5px;
                 border-radius: 3px;
-                cursor: pointer;
                 color: white;
                 transition-duration: .3s;
                 box-shadow: 5px 5px #cacaca;

@@ -52,7 +52,7 @@ app.post('/send-message', (req, res) => {
           `
   }).then(r => {
     let url = req.headers.referer
-    let renderUrl = url.slice(22, url.length)
+    let renderUrl = url.slice(req.headers.host.length + 9, url.length)
     if(renderUrl == ''){
       res.render('home', {success: true})
     }

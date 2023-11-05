@@ -445,6 +445,14 @@
                 background-color: white;
                 width: 100%;
             }
+
+            #about {
+                width: 100%;
+                color: #ffffff;
+                height: 100vh;
+                background-image: url("./contact4.jpg");
+                background-position: center;
+            }
             #text{
                 padding-top: 200px;
                 width: 300px;
