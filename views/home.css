@@ -701,13 +701,16 @@ html{
                 flex-direction: column;
                 align-items: center;
             }
+	    #services h1{
+		    font-size: 22px;
+	    }
             #sd1{
                 display: flex;
                 flex-direction: column-reverse;
                 align-items: center;
             }
             #sd1 img{
-                width: 350px;
+                width: 320px;
                 border-radius: 5px;
             }
             #sd1 p{
@@ -737,18 +740,18 @@ html{
                 border-radius: 5px;
             }
             #com{
-                margin-left: 70px;
+                margin-left: 10px;
             }
             #ser{
-                width: 350px;
-                margin-left: 40px;
+                width: 310px;
+                margin-left: 0px;
                 margin-top: 30px;
                 display: flex;
                 flex-direction: column;
             }
             #ser h2{
                 font-size: 18px;
-                padding: 15px 10px 15px 10px;
+                padding: 15px 5px 15px 5px;
                 background-color: #00aeff;
                 margin: 5px;
                 border-radius: 3px;
@@ -763,10 +766,10 @@ html{
                 align-items: center;
             }
             #sd3 h3{
-                font-size: 22px;
+                font-size: 19px;
                 color: #9c9c9c;
-                padding-left: 15px;
-                padding-right: 15px;
+                padding-left: 25px;
+                padding-right: 25px;
             }
             #title{
                 width: 400px;
@@ -778,7 +781,7 @@ html{
                 grid-template-columns: repeat(1, 1fr);
             }
             #cont3 div{
-                width: 220px;
+                width: 210px;
                 height: 300px;
             }
             #cont3 div h1{
