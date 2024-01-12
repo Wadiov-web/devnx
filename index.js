@@ -3,7 +3,6 @@ const app = express()
 const nodemailer = require("nodemailer")
 const session = require('express-session')
 const axios = require('axios')
-const ip = require('ip')
 const requestIp = require('request-ip')
 
 require('dotenv').config()
