@@ -2,36 +2,9 @@ const express = require('express')
 const app = express()
 const nodemailer = require("nodemailer")
 const session = require('express-session')
-const satelize = require('satelize')
-const platform = require('platform')
-
 const axios = require('axios')
 
 require('dotenv').config()
-
-// on IE10 x86 platform preview running in IE7 compatibility mode on Windows 7 64 bit edition
-// platform.name; // 'IE'
-// platform.version; // '10.0'
-// platform.layout; // 'Trident'
-// platform.os; // 'Windows Server 2008 R2 / 7 x64'
-// platform.description; // 'IE 10.0 x86 (platform preview; running in IE 7 mode) on Windows Server 2008 R2 / 7 x64'
- 
-// // or on an iPad
-// platform.name; // 'Safari'
-// platform.version; // '5.1'
-// platform.product; // 'iPad'
-// platform.manufacturer; // 'Apple'
-// platform.layout; // 'WebKit'
-// platform.os; // 'iOS 5.0'
-// platform.description; // 'Safari 5.1 on Apple iPad (iOS 5.0)'
- 
-// // or parsing a given UA string
-// var info = platform.parse('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7.2; en; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 11.52');
-// info.name; // 'Opera'
-// info.version; // '11.52'
-// info.layout; // 'Presto'
-// info.os; // 'Mac OS X 10.7.2'
-// info.description; // 'Opera 11.52 (identifying as Firefox 4.0) on Mac OS X 10.7.2'
 
 
 app.set('view engine', 'ejs');
@@ -46,7 +19,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 app.use(session({
-  secret: '123secret',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false
 }))
@@ -58,37 +31,18 @@ app.get('/', (req, res) => {
   } else {
     req.session.viewCount += 1
   }
-  console.log(req.session)
   res.render('home', {success: false})
 })
 
 
 
 app.get('/contact-us', (req, res) => {
-  //console.log(req.headers['user-agent'])
-  // console.log(platform.name)
-  // console.log(platform.version)
-  // console.log(platform.layout)
-  // console.log(platform.os)
-  // console.log(platform.description)
-
-  //let ip = req.header('x-forwarded-for') || req.socket.remoteAddress
- // console.log(ip)
-  // satelize.satelize({ip: '46.19.37.108'}, function(err, payload) {
-  //   if(err) console.log(err)
-  //   console.log(payload)
-  // })
 
   if(!req.session.viewCount){
     req.session.viewCount = 1
   } else {
     req.session.viewCount += 1
   }
-  console.log(req.session)
-
-  // if(req.session.viewCount == 1){
-  //   console.log('11111111')
-  // }
 
   res.render('contact-us', {success: false})
 })
@@ -99,7 +53,6 @@ app.get('/about-us', (req, res) => {
   } else {
     req.session.viewCount += 1
   }
-  console.log(req.session)
   res.render('about', {success: false})
 })
 
@@ -148,14 +101,11 @@ app.post('/user-info', async (req, res) => {
   if(req.session.viewCount == 1){
 
     const response = await axios.get('http://api.ipify.org/')
-    //console.log(response.data)
 
     const ip = response.data
     const url = `http://ip-api.com/json/${ip}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query`
     const ip_api = await axios.get(url)
-    // console.log(ip_api.data)
 
-    console.log(req.body)
     const sys = req.body
     const loc = ip_api.data
 
