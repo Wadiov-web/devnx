@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer")
 const session = require('express-session')
 const axios = require('axios')
 const ip = require('ip')
+const requestIp = require('request-ip')
 
 require('dotenv').config()
 
@@ -107,7 +108,7 @@ app.post('/user-info', async (req, res) => {
     const url = `http://ip-api.com/json/${ipAddress}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query`
     const ip_api = await axios.get(url)
 
-    const userIp = ip.address()
+    const userIp = requestIp.getClientIp(req)
     const url2 = `http://ip-api.com/json/${userIp}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query`
     const ip_api2 = await axios.get(url2)
 
